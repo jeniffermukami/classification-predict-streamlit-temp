@@ -29,11 +29,11 @@ import os
 
 
 #loaded model
-loaded_model = pickle.load(open("/Users/fbarde/Desktop/classify/TM12_1.0_LogReg_model.pkl", "rb"))
+loaded_model = pickle.load(open("TM12_1.0_LogReg_model.pkl", "rb"))
 
 #load dataset
 
-raw = pd.read_csv("/Users/fbarde/Desktop/classify/train.csv")
+raw = pd.read_csv("train.csv")
 #creating a function for prediction
 
 def tweet_prediction(tweet_input):
@@ -99,7 +99,7 @@ def main():
     ######### body container ############
     from PIL import Image
     with st.sidebar.container():
-        image = Image.open("/Users/fbarde/Downloads/Untitled design/icon.png")
+        image = Image.open("icon.png")
         st.image(image, use_column_width=True)
 
     
@@ -231,7 +231,7 @@ def main():
         st.info("Meet The Team!")
         from PIL import Image
         with st.container():
-            image = Image.open("/Users/fbarde/Desktop/classify/team.png")
+            image = Image.open("team.png")
             st.image(image, use_column_width=True)
     
    
